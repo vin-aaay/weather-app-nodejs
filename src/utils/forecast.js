@@ -14,7 +14,7 @@ const forecast=(latitude,longitude,callback)=>{
         }
         else{
             callback(undefined,
-            body.daily.data[0].summary + '.It is currently ' + body.currently.temperature + ' and rain probability is '  + body.currently.precipProbability)
+            body.daily.data[0].summary + '.It is currently ' + body.currently.temperature + ' and rain probability is '  + body.currently.precipProbability + ' With Highest temp = ' + body.daily.data[0].temperatureHigh + ' and lowest temp = ' + body.daily.data[0].temperatureLow)
         }
     })
 }
