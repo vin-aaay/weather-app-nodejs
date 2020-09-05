@@ -6,6 +6,7 @@ const express=require('express')
 const hbs=require('hbs')
 
 const app=express()
+const port = process.env.PORT || 3000
 
 //Define Paths for Express Config
 const publicDirectoryPath = path.join(__dirname,'../public')
@@ -112,6 +113,6 @@ app.get('*',(req,res)=>{
         })
 })
 
-app.listen(3000,()=>{
-    console.log('welcome to port 3000')
+app.listen(port,()=>{
+    console.log('welcome to port '+ port)
 })
